@@ -1,0 +1,36 @@
+.status-icon {
+  font-size: 50%;
+}
+
+.status-icon-stack {
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+}
+
+@keyframes burst {
+  0% {opacity:1}
+  //50%{transform:scale(1.2);opacity:0.8}
+  //100%{transform:scale(1);opacity:1}
+  50%{transform:scale(1);opacity:1}
+  100%{transform:scale(1.5);opacity:0}
+}
+.fa-pulse {
+  animation: burst 2s infinite linear
+}
+
+.status-icon-on {
+  color: #2ecc71;
+}
+
+.status-icon-off {
+  color: #e74c3c;
+}
+
+.status-icon-waiting {
+  color: #e67e22;
+}
+
+.computer-controls {
+  margin-bottom: 5px;
+}
