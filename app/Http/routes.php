@@ -14,6 +14,11 @@
 Route::get('/', 'WelcomeController@index');
 
 /*
+ * Authentication
+ */
+Route::controller('auth', 'AuthController');
+
+/*
  * Computer
  */
 Route::resource('computer', 'ComputerController');

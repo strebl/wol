@@ -11,6 +11,15 @@ use JJG\Ping;
 
 class ComputerController extends Controller {
 
+    /**
+     * Create a new computer controller instance.
+     *
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
 	/**
 	 * Display a listing of the resource.
 	 *
