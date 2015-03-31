@@ -15,16 +15,6 @@
                 <a href="{{ route('computer.index') }}">My Computers<span class="navbar-unread"></span></a>
             </li>
         </ul>
-        <form class="navbar-form navbar-left" action="#" role="search">
-            <div class="form-group">
-                <div class="input-group">
-                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-                <span class="input-group-btn">
-                  <button type="submit" class="btn"><span class="fui-search"></span></button>
-                </span>
-                </div>
-            </div>
-        </form>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manuel Strebel <b class="caret"></b></a>
@@ -36,7 +26,6 @@
                     <li><a href="#">Separated link</a></li>
                 </ul>
             </li>
-            <li><a href="#"><span class="visible-sm visible-xs">Settings<span class="fui-gear"></span></span><span class="visible-md visible-lg"><span class="fui-gear"></span></span></a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
