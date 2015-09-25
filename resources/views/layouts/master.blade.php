@@ -20,7 +20,9 @@
         <!-- Loading Sweet Alert -->
         <link rel="stylesheet" type="text/css" href="/css/sweet-alert.css">
 
-        <link rel="shortcut icon" href="/img/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+        <link rel="shortcut icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
