@@ -624,12 +624,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/strebl/Ping.git",
-                "reference": "900f9c6143db5ded624b23cb3b1e3b5f9d768f29"
+                "reference": "46e86832798f53b1b1d546139d1c61e0dfb4f635"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strebl/Ping/zipball/900f9c6143db5ded624b23cb3b1e3b5f9d768f29",
-                "reference": "900f9c6143db5ded624b23cb3b1e3b5f9d768f29",
+                "url": "https://api.github.com/repos/strebl/Ping/zipball/46e86832798f53b1b1d546139d1c61e0dfb4f635",
+                "reference": "46e86832798f53b1b1d546139d1c61e0dfb4f635",
                 "shasum": ""
             },
             "type": "library",
@@ -651,7 +651,7 @@
             "support": {
                 "source": "https://github.com/strebl/Ping/tree/1.x"
             },
-            "time": "2015-09-26 19:58:57"
+            "time": "2015-09-26 22:17:38"
         },
         {
             "name": "jakub-onderka/php-console-color",
