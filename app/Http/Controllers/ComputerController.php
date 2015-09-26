@@ -152,7 +152,7 @@ class ComputerController extends Controller {
 
         $latency = $ping->ping(env('PING_METHOD', 'exec'));
 
-        if($latency)
+        if($latency !== false)
         {
             return "on";
         }
