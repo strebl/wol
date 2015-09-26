@@ -150,7 +150,7 @@ class ComputerController extends Controller {
 
         $ping = new Ping($computer->ip, 100, 1);
 
-        $latency = $ping->ping('socket');
+        $latency = $ping->ping(env('PING_METHOD', 'exec'));
 
         if($latency)
         {
