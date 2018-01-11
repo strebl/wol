@@ -121,7 +121,11 @@ class ComputerController extends Controller {
     {
         $magicPacket = $phpwol->magicPacket();
 
-        $result = $magicPacket->send($computer->mac, $computer->broadcast);
+        if ($computer->use_broadcast) {
+            $result = $magicPacket->send($computer->mac, $computer->broadcast);
+        } else {
+            $result = $magicPacket->send($computer->mac, $computer->ip, $computer->subnet);
+        }
 
         if($result)
         {
