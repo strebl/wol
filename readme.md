@@ -3,13 +3,17 @@
 ![app screenshot](docs/screenshot.png)
 
 ## Installation
-`touch storage/database.sqlite`
-`php artisan migrate`
+```bash
+touch storage/database.sqlite
+php artisan migrate
+```
 
 ## Usage
 
 ### Create a User
-`php artisan user:create <email>`
+```bash
+php artisan user:create <email>
+```
 
 ## License
 
