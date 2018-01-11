@@ -70,16 +70,16 @@
                             <td class="text-right">{{ $computer->mac }}</td>
                         </tr>
                         <tr>
-                            <th>Broadcast</th>
-                            <td class="text-right">{{ $computer->broadcast }}</td>
+                            <th class="{{ !$computer->use_broadcast ? 'is-inactive' : '' }}">Broadcast</th>
+                            <td class="text-right{{ !$computer->use_broadcast ? ' is-inactive' : '' }}">{{ $computer->broadcast }}</td>
                         </tr>
                         <tr>
-                            <th>IP</th>
-                            <td class="text-right">{{ $computer->ip }}</td>
+                            <th class="{{ $computer->use_broadcast ? 'is-inactive' : '' }}">IP</th>
+                            <td class="text-right{{ $computer->use_broadcast ? ' is-inactive' : '' }}">{{ $computer->ip }}</td>
                         </tr>
                         <tr>
-                            <th>Subnet</th>
-                            <td class="text-right">{{ $computer->subnet }}</td>
+                            <th class="{{ $computer->use_broadcast ? 'is-inactive' : '' }}">Subnet</th>
+                            <td class="text-right{{ $computer->use_broadcast ? ' is-inactive' : '' }}">{{ $computer->subnet }}</td>
                         </tr>
                     </table>
                     <a class="btn btn-primary btn-hg btn-block" href="/computer/{{ $computer->id }}/boot">
