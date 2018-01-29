@@ -32,8 +32,8 @@ class ComputerRequest extends Request {
             'mac' => 'required|mac',
             'use_broadcast' => 'required',
             'broadcast' => 'required_if:use_broadcast,1|ip',
-            'ip' => 'required_if:use_broadcast,0|ip',
-            'subnet' => 'required_if:use_broadcast,0|ip',
+            'ip' => 'required_if:use_broadcast,0|ip|nullable',
+            'subnet' => 'required_if:use_broadcast,0|ip|nullable',
 		];
 	}
 
