@@ -1,6 +1,6 @@
 <?php namespace App\Console\Commands;
 
-use Illuminate\Contracts\Auth\Registrar;
+use App\Services\Registrar;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
@@ -58,7 +58,7 @@ class UserCreateCommand extends Command {
 	 *
 	 * @return mixed
 	 */
-	public function fire()
+	public function handle()
 	{
         $credentials = $this->getCredentials();
 
