@@ -1,25 +1,27 @@
-<?php namespace App\Console\Commands;
+<?php
+
+namespace App\Console\Commands;
 
 use App\Services\Registrar;
 use Illuminate\Console\Command;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 
-class UserCreateCommand extends Command {
+class UserCreateCommand extends Command
+{
+    /**
+     * The console command name.
+     *
+     * @var string
+     */
+    protected $name = 'user:create';
 
-	/**
-	 * The console command name.
-	 *
-	 * @var string
-	 */
-	protected $name = 'user:create';
-
-	/**
-	 * The console command description.
-	 *
-	 * @var string
-	 */
-	protected $description = 'Create a User.';
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Create a User.';
 
     /**
      * @var Registrar
@@ -46,33 +48,32 @@ class UserCreateCommand extends Command {
      *
      * @param Registrar $registrar
      */
-	public function __construct(Registrar $registrar)
-	{
-		parent::__construct();
+    public function __construct(Registrar $registrar)
+    {
+        parent::__construct();
 
         $this->registrar = $registrar;
     }
 
-	/**
-	 * Execute the console command.
-	 *
-	 * @return mixed
-	 */
-	public function handle()
-	{
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
         $credentials = $this->getCredentials();
 
         $validator = $this->registrar->validator($credentials);
 
-        if($validator->fails())
-        {
+        if ($validator->fails()) {
             return $this->displayErrors($validator->errors());
         }
 
         $this->registrar->create($credentials);
 
         $this->info('User created!');
-	}
+    }
 
     /**
      * Get the email address and the password and
@@ -96,29 +97,29 @@ class UserCreateCommand extends Command {
     }
 
     /**
-	 * Get the console command arguments.
-	 *
-	 * @return array
-	 */
-	protected function getArguments()
-	{
-		return [
-            ['email', InputArgument::REQUIRED, 'E-Mail Address']
-		];
-	}
+     * Get the console command arguments.
+     *
+     * @return array
+     */
+    protected function getArguments()
+    {
+        return [
+            ['email', InputArgument::REQUIRED, 'E-Mail Address'],
+        ];
+    }
 
-	/**
-	 * Get the console command options.
-	 *
-	 * @return array
-	 */
-	protected function getOptions()
-	{
-		return [
+    /**
+     * Get the console command options.
+     *
+     * @return array
+     */
+    protected function getOptions()
+    {
+        return [
             ['password', null, InputOption::VALUE_OPTIONAL, 'Password', null],
             ['password_confirmation', null, InputOption::VALUE_OPTIONAL, 'Password Confirmation', null],
-		];
-	}
+        ];
+    }
 
     /**
      * Display the errors to the console.
@@ -129,10 +130,8 @@ class UserCreateCommand extends Command {
      */
     private function displayErrors($errors)
     {
-        foreach($errors->all() as $error) {
-
+        foreach ($errors->all() as $error) {
             $this->error($error);
         }
     }
-
 }
