@@ -16,7 +16,7 @@
             </li>
         </ul>
         @if(Auth::guest())
-            <form class="navbar-form navbar-right" role="form" method="POST" action="{{ url('/auth/login') }}">
+            <form class="navbar-form navbar-right" role="form" method="POST" action="{{ url('/login') }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                     <input type="text" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}">
