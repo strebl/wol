@@ -16,9 +16,7 @@ Route::get('/', 'WelcomeController@index');
 /*
  * Authentication
  */
-Route::get('auth/login', 'Auth\LoginController@login');
-Route::post('auth/login', 'Auth\LoginController@login');
-Route::get('auth/logout', 'Auth\LoginController@logout');
+Auth::routes(['register' => false]);
 
 /*
  * Computer
